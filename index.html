@@ -260,11 +260,7 @@
             text-shadow: 0 0 10px rgba(0, 255, 102, 0.3);
         }
 
-        /* Botón de Inyección / Compra */
-        .btn-action {
-            width: 100%;
-            padding: 14px;
-            background: transparent;
+        /* Botón de Inyección /             background: transparent;
             border: 1px solid var(--neon-green);
             color: var(--neon-green);
             font-family: 'Orbitron', sans-serif;
@@ -309,3 +305,185 @@
             color: #000;
             box-shadow: 0 0 15px var(--neon-red);
         }
+
+        /* PIE DE PÁGINA TERMINAL */
+        footer {
+            margin-top: 70px;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: rgba(0, 255, 102, 0.4);
+            border-top: 1px dashed rgba(0, 255, 102, 0.2);
+            letter-spacing: 2px;
+        }
+
+        /* Animaciones CSS */
+        @keyframes scanline-top {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @media (max-width: 600px) {
+            .glitch-title { font-size: 2.2rem; }
+            .stats-wrapper { grid-template-columns: 1fr; gap: 10px; }
+            header { padding: 30px 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Canvas de Fondo (Lluvia Matrix) -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="app-container">
+        <header>
+            <h1 class="glitch-title">SENSI HANZX</h1>
+            <div class="subtitle">SISTEMA INTEGRADO // MEJOR TIENDA XITER</div>
+            
+            <div class="stats-wrapper">
+                <div class="stat-box">
+                    <span class="num">1,176</span>
+                    <span class="label">Operativos</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">98</span>
+                    <span class="label">Inyecciones</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">24/7</span>
+                    <span class="label">Uptime</span>
+                </div>
+            </div>
+        </header>
+
+        <h2 class="section-title">Terminal de Rentas Disponibles</h2>
+
+        <div class="products-grid">
+            <div class="product-card" id="prod-monite">
+                <div>
+                    <div class="product-meta"><span>Secure Bypass</span><span>iOS</span></div>
+                    <h3>MONITE CHEATS</h3>
+                    
+                    <div class="selectors-block">
+                        <div class="control-group">
+                            <label>Región del Servidor</label>
+                            <select class="custom-select country-select" onchange="updatePrice('monite')">
+                                <option value="MX">México (MXN)</option>
+                                <option value="US">USA (USD)</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>Licencia de Acceso</label>
+                            <select class="custom-select duration-select" onchange="updatePrice('monite')">
+                                <option value="1">1 Mes</option>
+                                <option value="3">3 Meses</option>
+                                <option value="12">1 Año</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="price-display">
+                        <span class="price-amount" id="price-monite">$500 MXN</span>
+                    </div>
+                    <button class="btn-action" onclick="redirectPurchase('MONITE CHEATS', 'monite')">Inyectar Acceso</button>
+                </div>
+            </div>
+
+            <div class="product-card" id="prod-drip">
+                <div>
+                    <div class="product-meta"><span>Multi-Tool</span><span>Android / PC</span></div>
+                    <h3>DRIPCLIENT</h3>
+                    
+                    <div class="selectors-block">
+                        <div class="control-group">
+                            <label>Región del Servidor</label>
+                            <select class="custom-select country-select" onchange="updatePrice('drip')">
+                                <option value="MX">México (MXN)</option>
+                                <option value="US">USA (USD)</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>Licencia de Acceso</label>
+                            <select class="custom-select duration-select" onchange="updatePrice('drip')">
+                                <option value="1">1 Mes</option>
+                                <option value="3">3 Meses</option>
+                                <option value="12">1 Año</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="price-display">
+                        <span class="price-amount" id="price-drip">$260 MXN</span>
+                    </div>
+                    <button class="btn-action" onclick="redirectPurchase('DRIPCLIENT', 'drip')">Inyectar Acceso</button>
+                </div>
+            </div>
+
+            <div class="product-card" id="prod-cuban">
+                <div>
+                    <div class="product-meta"><span>Root & Non-Root</span><span>Android</span></div>
+                    <h3>CUBAN MODS</h3>
+                    
+                    <div class="selectors-block">
+                        <div class="control-group">
+                            <label>Región del Servidor</label>
+                            <select class="custom-select country-select" onchange="updatePrice('cuban')">
+                                <option value="MX">México (MXN)</option>
+                                <option value="US">USA (USD)</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>Licencia de Acceso</label>
+                            <select class="custom-select duration-select" onchange="updatePrice('cuban')">
+                                <option value="1">1 Mes</option>
+                                <option value="3">3 Meses</option>
+                                <option value="12">1 Año</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="price-display">
+                        <span class="price-amount" id="price-cuban">$200 MXN</span>
+                    </div>
+                    <button class="btn-action" onclick="redirectPurchase('CUBAN MODS', 'cuban')">Inyectar Acceso</button>
+                </div>
+            </div>
+
+            <div class="product-card locked">
+                <div>
+                    <div class="product-meta"><span>Status: Offline</span><span>Android</span></div>
+                    <h3>PRIME HOOK</h3>
+                    <div class="selectors-block" style="opacity: 0.4; pointer-events: none;">
+                        <div class="control-group"><label>Región</label><select class="custom-select"><option>MÉXICO</option></select></div>
+                        <div class="control-group"><label>Licencia</label><select class="custom-select"><option>1 Mes</option></select></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="price-display">
+                        <span class="price-amount">PROXIMAMENTE</span>
+                    </div>
+                    <button class="btn-action btn-locked" disabled>Encriptado</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>// CONEXIÓN CIFRADA TERMINAL - APARTADO OFICIAL SENSI HANZX //</footer>
+    </div>
+
+    <script>
+        const priceDatabase = {
+            monite: { MX: 500, US: 25 },
+            drip: { MX: 260, US: 17 },
+            cuban: { MX: 200, US: 11 }
+        };
+
+        function updatePrice(productId) {
+            const card = document.getElementById(`prod-${productId}`);
+            const country = card.querySelector('.country-select').value;
+            const duration = parseInt(card.querySelector('.duration-select').value);
+            const priceElement = document.getElementById(`price-${productId}`);
+            
+            let basePrice = priceDatabase[productId][country];
+            let totalPrice = basePrice * duration;
