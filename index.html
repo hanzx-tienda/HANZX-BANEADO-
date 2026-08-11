@@ -3,528 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENSI HANZX</title>
+    <title>SENSI HANZX — PREMIUM BYPASS & CHEATS</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-        body { background-color: #0d1117; color: #f0f6fc; padding: 20px; line-height: 1.5; }
-        .container { max-width: 900px; margin: 0 auto; }
-        .header-top { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: #8b949e; }
-        .online-dot { width: 10px; height: 10px; background: #2ea44f; border-radius: 50%; }
-        h1 { color: #ffd700; margin-bottom: 8px; font-size: 2rem; }
-        .subtitle { color: #ffd700; text-transform: uppercase; margin-bottom: 20px; font-size: 1.2rem; }
-        .stats { display: flex; gap: 30px; margin-bottom: 20px; color: #8b949e; }
-        .stats strong { display: block; color: #fff; font-size: 1.5rem; }
-        .support { color: #8b949e; margin-bottom: 25px; }
-        .btn-group { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
-        .btn { padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; transition: 0.2s; }
-        .btn:hover { opacity: 0.9; }
-        .btn-primary { background: #ffd700; color: #000; }
-        .btn-secondary { background: #161b22; color: #ffd700; border: 1px solid #ffd700; }
-        h2 { color: #ffd700; margin-bottom: 25px; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
-        .category { margin-bottom: 35px; }
-        .category-label { color: #8b949e; text-transform: uppercase; margin-bottom: 15px; font-weight: bold; }
-        .product-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 18px; margin-bottom: 15px; }
-        .product-name { color: #fff; margin-bottom: 8px; font-size: 1.1rem; }
-        .product-duration { color: #8b949e; margin-bottom: 10px; }
-        .price-item { margin-bottom: 5px; }
-        .proximamente { color: #f0883e; font-weight: bold; }
+        @import url('https://googleapis.com');
 
-        /* NUEVO: Selectores y botón de compra */
-        .buy-controls { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
-        .buy-row { display: flex; gap: 8px; flex-wrap: wrap; }
-        select, .btn-buy { padding: 8px 10px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: #fff; font-size: 0.9rem; }
-        select:focus { outline: none; border-color: #ffd700; }
-        .btn-buy { background: #ffd700; color: #000; font-weight: bold; flex: 1; min-width: 140px; border: none; }
-        .btn-buy:disabled { background: #444; cursor: not-allowed; opacity: 0.6; }
-        .price-show { margin-top: 6px; color: #ffd700; font-weight: bold; font-size: 0.95rem; }
-
-        .creator-section { margin-top: 50px; text-align: center; padding-top: 25px; border-top: 1px solid #30363d; }
-        .creator-name { color: #ffd700; font-size: 1.4rem; margin-bottom: 8px; }
-        .creator-role { color: #8b949e; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header-top">
-            <span class="online-dot"></span>
-            <span>SERVICIO EN LINEA</span>
-        </div>
-
-        <h1>SENSI HANZX</h1>
-        <div class="subtitle">LA MEJOR TIENDA XITER</div>
-
-        <div class="stats">
-            <div><strong>1,176</strong> Seguidores</div>
-            <div><strong>98</strong> Compras</div>
-        </div>
-
-        <div class="support">24/7 Soporte</div>
-
-        <div class="btn-group">
-            <a href="#" class="btn btn-primary">VER PRODUCTOS</a>
-            <a href="#" class="btn btn-secondary">VER CANAL DE WHATSAPP</a>
-        </div>
-
-        <h2>LISTA DE PRODUCTOS</h2>
-        <h2>RENTAS DISPONIBLES</h2>
-
-        <!-- IPHONE -->
-        <div class="category">
-            <div class="category-label">IPHONE</div>
-
-            <div class="product-card" data-mx="560" data-us="30" data-tipo="mes">
-                <h3 class="product-name">FLOURITE</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $560 MXN</p>
-                <p class="price-item">🇺🇸 USA: $30 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="500" data-us="25" data-tipo="mes">
-                <h3 class="product-name">MONITE CHEATS</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $500 MXN</p>
-                <p class="price-item">🇺🇸 USA: $25 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <h3 class="product-name">PROXY iOS</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: <span class="proximamente">PROXIMAMENTE</span></p>
-                <p class="price-item">🇺🇸 USA: <span class="proximamente">PROXIMAMENTE</span></p>
-            </div>
-        </div>
-
-        <!-- ANDROID -->
-        <div class="category">
-            <div class="category-label">ANDROID</div>
-
-            <div class="product-card">
-                <h3 class="product-name">PRIME HOOK</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: <span class="proximamente">PROXIMAMENTE</span></p>
-                <p class="price-item">🇺🇸 USA: <span class="proximamente">PROXIMAMENTE</span></p>
-            </div>
-
-            <div class="product-card" data-mx="200" data-us="15" data-tipo="mes">
-                <h3 class="product-name">HG CHEATS</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $200 MXN</p>
-                <p class="price-item">🇺🇸 USA: $15 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="200" data-us="11" data-tipo="mes">
-                <h3 class="product-name">CUBAN MODS</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $200 MXN</p>
-                <p class="price-item">🇺🇸 USA: $11 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="260" data-us="17" data-tipo="mes">
-                <h3 class="product-name">DRIPCLIENT</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $260 MXN</p>
-                <p class="price-item">🇺🇸 USA: $17 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="320" data-us="19" data-tipo="mes">
-                <h3 class="product-name">PATO TEAM GREEN 🟢</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $320 MXN</p>
-                <p class="price-item">🇺🇸 USA: $19 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="360" data-us="20" data-tipo="mes">
-                <h3 class="product-name">PATO TEAM ORANGE 🟠</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $360 MXN</p>
-                <p class="price-item">🇺🇸 USA: $20 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="300" data-us="18" data-tipo="mes">
-                <h3 class="product-name">PATO TEAM BLUE 🔵</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $300 MXN</p>
-                <p class="price-item">🇺🇸 USA: $18 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <h3 class="product-name">PROXY DRIP</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: <span class="proximamente">PROXIMAMENTE</span></p>
-                <p class="price-item">🇺🇸 USA: <span class="proximamente">PROXIMAMENTE</span></p>
-            </div>
-
-            <div class="product-card">
-                <h3 class="product-name">PROXY CUBAN</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: <span class="proximamente">PROXIMAMENTE</span></p>
-                <p class="price-item">🇺🇸 USA: <span class="proximamente">PROXIMAMENTE</span></p>
-            </div>
-
-            <div class="product-card">
-                <h3 class="product-name">PROXY NETFLIX</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: <span class="proximamente">PROXIMAMENTE</span></p>
-                <p class="price-item">🇺🇸 USA: <span class="proximamente">PROXIMAMENTE</span></p>
-            </div>
-
-            <div class="product-card" data-mx="200" data-us="10" data-tipo="permanente">
-                <h3 class="product-name">HOLOGRAMA VIP</h3>
-                <p class="product-duration">Permanente</p>
-                <p class="price-item">🇲🇽 México: $200 MXN</p>
-                <p class="price-item">🇺🇸 USA: $10 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">Permanente</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- ANDROID ROOT -->
-        <div class="category">
-            <div class="category-label">ANDROID ROOT</div>
-
-            <div class="product-card" data-mx="200" data-us="10" data-tipo="mes">
-                <h3 class="product-name">BRMODS ROOT</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $200 MXN</p>
-                <p class="price-item">🇺🇸 USA: $10 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="200" data-us="15" data-tipo="mes">
-                <h3 class="product-name">HG CHEATS ROOT</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $200 MXN</p>
-                <p class="price-item">🇺🇸 USA: $15 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="200" data-us="11" data-tipo="mes">
-                <h3 class="product-name">CUBAN MODS ROOT</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $200 MXN</p>
-                <p class="price-item">🇺🇸 USA: $11 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="260" data-us="17" data-tipo="mes">
-                <h3 class="product-name">DRIPCLIENT ROOT</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $260 MXN</p>
-                <p class="price-item">🇺🇸 USA: $17 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- PC -->
-        <div class="category">
-            <div class="category-label">PC</div>
-
-            <div class="product-card" data-mx="200" data-us="10" data-tipo="mes">
-                <h3 class="product-name">BRMODS PC</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $200 MXN</p>
-                <p class="price-item">🇺🇸 USA: $10 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-mx="320" data-us="16" data-tipo="mes">
-                <h3 class="product-name">DRIPCLIENT PC</h3>
-                <p class="product-duration">Duración - 1 Mes</p>
-                <p class="price-item">🇲🇽 México: $320 MXN</p>
-                <p class="price-item">🇺🇸 USA: $16 USD</p>
-                <div class="buy-controls">
-                    <div class="buy-row">
-                        <select class="sel-pais">
-                            <option value="">Selecciona País</option>
-                            <option value="mx">🇲🇽 México</option>
-                            <option value="us">🇺🇸 USA</option>
-                        </select>
-                        <select class="sel-duracion">
-                            <option value="">Duración</option>
-                            <option value="1">1 Mes</option>
-                            <option value="3">3 Meses</option>
-                            <option value="12">1 Año</option>
-                        </select>
-                    </div>
-                    <div class="price-show"></div>
-                    <button class="btn btn-buy" disabled>COMPRAR</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="creator-section">
-            <p style="color:#8b949e; margin-bottom:8px;">CREADOR OFICIAL</p>
-            <h3 class="creator-name">SENSI HANZX</h3>
-            <p class="creator-role">Fundador de SENSI HANZX</p>
-        </div>
-    </div>
-
-<script>
-// Funcionamiento automático
-document.querySelectorAll('.product-card').forEach(tarjeta => {
-    const pais = tarjeta.querySelector('.sel-pais');
-    const durac = tarjeta.querySelector('.sel-duracion');
-    const precio = tarjeta.querySelector('.price-show');
-    const btn = tarjeta.querySelector('.btn-buy');
-    const mx = parseFloat(tarjeta.dataset.mx);
-    const us = parseFloat(tarjeta.dataset.us);
-    const tipo = tarjeta.dataset.tipo;
-
-    function actualizar() {
-        if(!pais || !durac || !precio || !btn) return;
-        const vPais = pais.value;
-        const vDurac = parseInt(durac.value);
-
-        if(vPais && vDurac) {
-            let total = (vPais === 'mx' ? mx : us) * vDurac;
-            let moneda = vPais === 'mx' ? 'MXN' : 'USD';
-            precio.textContent = `Total: $${total} ${moneda}`;
-            btn.disabled = false;
-        } else {
-            precio.textContent = '';
-            btn.disabled = true;
+        /* Configuración Global y Variables */
+        :root {
+            --neon-green: #00ff66;
+            --neon-green-glow: rgba(0, 255, 102, 0.4);
+            --neon-red: #ff3333;
+            --neon-red-glow: rgba(255, 51, 51, 0.4);
+            --bg-dark: #020604;
+            --card-bg: rgba(4, 15, 8, 0.75);
+            --text-main: #e0ffee;
         }
-    }
 
-    if(pais) pais.addEventListener('change', actualizar);
-    if(durac) durac.addEventListener('change', actualizar);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
 
-    // Acción al comprar
-    if(btn) btn.addEventListener('click', () => {
-        const nombre = tarjeta.querySelector('.product-name').textContent;
-        const total = precio.textContent;
-        alert(`✅ Pedido listo:\nProducto: ${nombre}\n${total}\n\nAquí iría el enlace de pago o contacto`);
-    });
-});
-</script>
-</body>
-</html>
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Share Tech Mono', monospace;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Lienzo de Lluvia Matrix */
+        #matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            opacity: 0.25;
+            pointer-events: none;
+        }
+
+        /* Contenedor de Contenido */
+        .app-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* HEADER PREMIUM CON EFECTO GLITCH */
+        header {
+            text-align: center;
+            background: rgba(2, 10, 5, 0.85);
+            border: 1px solid var(--neon-green);
+            box-shadow: 0 0 25px rgba(0, 255, 102, 0.15), inset 0 0 15px rgba(0, 255, 102, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 50px 30px;
+            border-radius: 4px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+            animation: scanline-top 3s linear infinite;
+        }
+
+        .glitch-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 6px;
+            color: #fff;
+            text-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+            color: var(--neon-green);
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        /* Tarjetas de Estadísticas */
+        .stats-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px dashed rgba(0, 255, 102, 0.4);
+            padding: 15px 10px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            border-color: var(--neon-green);
+            background: rgba(0, 255, 102, 0.03);
+            box-shadow: 0 0 10px rgba(0, 255, 102, 0.1);
+        }
+
+        .stat-box .num {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 5px var(--neon-green);
+        }
+
+        .stat-box .label {
+            font-size: 0.8rem;
+            color: var(--neon-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* SECCIÓN DE PRODUCTOS */
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--neon-green);
+            padding-left: 15px;
+            text-shadow: 0 0 5px var(--neon-green-glow);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* DISEÑO DE TARJETA DE PRODUCTO */
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+            border-radius: 4px;
+            padding: 30px 25px;
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--neon-green);
+            box-shadow: 0 10px 30px rgba(0, 255, 102, 0.15), 0 0 15px var(--neon-green-glow);
+        }
+
+        /* Esquinas estéticas decorativas estilo interfaz hacker */
+        .product-card::before, .product-card::after {
+            content: ''; position: absolute; width: 8px; height: 8px; border-color: var(--neon-green); border-style: solid; opacity: 0; transition: opacity 0.3s;
+        }
+        .product-card::before { top: -1px; left: -1px; border-width: 1px 0 0 1px; }
+        .product-card::after { bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
+        .product-card:hover::before, .product-card:hover::after { opacity: 1; }
+
+        .product-meta {
+            font-size: 0.85rem;
+            color: var(--neon-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(255,255,255,0.2);
+        }
+
+        .selectors-block {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 2px;
+            border: 1px dashed rgba(0, 255, 102, 0.15);
+            margin-bottom: 25px;
+        }
+
+        .control-group {
+            margin-bottom: 12px;
+        }
+        .control-group:last-child { margin-bottom: 0; }
+
+        .control-group label {
+            display: block;
+            font-size: 0.75rem;
+            color: rgba(0, 255, 102, 0.7);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .custom-select {
+            width: 100%;
+            background: #040c06;
+            border: 1px solid rgba(0, 255, 102, 0.4);
+            color: var(--text-main);
+            padding: 8px 12px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.95rem;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .custom-select:focus {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 8px var(--neon-green-glow);
+        }
+
+        /* Sección de Precio Activo */
+        .price-display {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+        .price-display .currency-label {
+            font-size: 0.9rem;
+            color: rgba(0, 255, 102, 0.6);
+        }
+        .price-display .price-amount {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.3);
+        }
+
+        /* Botón de Inyección / Compra */
+        .btn-action {
+            width: 100%;
+            padding: 14px;
+            background: transparent;
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .btn-action:hover {
+            background: var(--neon-green);
+            color: #000;
+            box-shadow: 0 0 15px var(--neon-green);
+            font-weight: 900;
+        }
+
+        /* TARJETA PRÓXIMAMENTE (PRIME HOOK) */
+        .product-card.locked {
+            border-color: rgba(255, 51, 51, 0.3);
+            background: rgba(15, 4, 4, 0.75);
+        }
+        .product-card.locked:hover {
+            border-color: var(--neon-red);
+            box-shadow: 0 10px 30px rgba(255, 51, 51, 0.15), 0 0 15px var(--neon-red-glow);
+        }
+        .product-card.locked::before, .product-card.locked::after { border-color: var(--neon-red); }
+        .product-card.locked h3 { text-shadow: 0 0 8px rgba(255, 51, 51, 0.4); }
+        .product-card.locked .product-meta { color: var(--neon-red); }
+        .product-card.locked .price-amount { color: var(--neon-red); text-shadow: 0 0 10px rgba(255, 51, 51, 0.3); }
+        
+        .btn-locked {
+            border-color: var(--neon-red);
+            color: var(--neon-red);
+            cursor: not-allowed;
+        }
+        .btn-locked:hover {
+            background: var(--neon-red);
+            color: #000;
+            box-shadow: 0 0 15px var(--neon-red);
+        }
